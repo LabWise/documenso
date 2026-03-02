@@ -1,4 +1,5 @@
-import { FieldType } from '@prisma/client';
+import pkg from '@prisma/client';
+const { FieldType } = pkg;
 import { z } from 'zod';
 
 import { DEFAULT_SIGNATURE_TEXT_FONT_SIZE } from '../constants/pdf';
