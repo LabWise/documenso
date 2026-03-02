@@ -22,5 +22,9 @@ export const env = <K extends EnvKey>(variable: K): EnvValue<K> => {
   return (typeof process !== 'undefined' ? process?.env?.[variable] : undefined) as EnvValue<K>;
 };
 
-export const createPublicEnv = () =>
-  Object.fromEntries(Object.entries(process.env).filter(([key]) => key.startsWith('NEXT_PUBLIC_')));
+export const createPublicEnv = () => ({
+  ...Object.fromEntries(
+    Object.entries(process.env).filter(([key]) => key.startsWith('NEXT_PUBLIC_')),
+  ),
+  NODE_ENV: process.env.NODE_ENV,
+});
