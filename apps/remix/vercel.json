@@ -1,5 +1,4 @@
 {
-  "framework": "remix",
   "buildCommand": "npm run build",
   "outputDirectory": "build/client",
   "rewrites": [
