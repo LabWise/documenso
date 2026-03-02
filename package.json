@@ -7,7 +7,7 @@
   ],
   "version": "2.6.1",
   "scripts": {
-    "postinstall": "npx patch-package",
+    "postinstall": "npx patch-package && npm run prisma:generate -w @documenso/prisma",
     "build": "turbo run build",
     "dev": "turbo run dev --filter=@documenso/remix",
     "dev:remix": "turbo run dev --filter=@documenso/remix",
