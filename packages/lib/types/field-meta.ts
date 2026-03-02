@@ -1,4 +1,5 @@
 import pkg from '@prisma/client';
+import type { FieldType as FieldTypeEnum } from '@prisma/client';
 const { FieldType } = pkg;
 import { z } from 'zod';
 
@@ -359,7 +360,7 @@ export const FIELD_SIGNATURE_META_DEFAULT_VALUES: TSignatureFieldMeta = {
   fontSize: DEFAULT_SIGNATURE_TEXT_FONT_SIZE,
 };
 
-export const FIELD_META_DEFAULT_VALUES: Record<FieldType, TFieldMetaSchema> = {
+export const FIELD_META_DEFAULT_VALUES: Record<FieldTypeEnum, TFieldMetaSchema> = {
   [FieldType.SIGNATURE]: FIELD_SIGNATURE_META_DEFAULT_VALUES,
   [FieldType.FREE_SIGNATURE]: undefined,
   [FieldType.INITIALS]: FIELD_INITIALS_META_DEFAULT_VALUES,
